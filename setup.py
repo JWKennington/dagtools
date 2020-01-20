@@ -8,7 +8,7 @@ import dagtools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-setuptools.setup(name='gravtools',
+setuptools.setup(name='dagtools',
                  version=dagtools.__version__,
                  description='Tools for manipulating Directed Acyclic Graphs in Python',
                  long_description=long_description,
