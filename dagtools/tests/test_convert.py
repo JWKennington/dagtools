@@ -1,7 +1,7 @@
 import networkx
 import pytest
 
-from dagtools import graph
+from dagtools import convert
 
 
 def clean_multiline(s: str) -> str:
@@ -28,7 +28,7 @@ class TestGraphConversions:
         return 'graph "G" {\n1;\n2;\n3;\n1 -- 2  [key=0];\n1 -- 3  [key=0];}'
 
     def test_nx_to_dot(self, g):
-        dot = graph.graph_to_dot(g)
+        dot = convert.graph_to_dot(g)
         assert_str_equal(dot, '''
         graph  {
         1;
@@ -40,5 +40,5 @@ class TestGraphConversions:
         ''')
 
     def test_dot_to_nx(self, dot_string, g):
-        converted_graph = graph.dot_to_graph(dot_string)
+        converted_graph = convert.dot_to_graph(dot_string)
         assert g.adj == converted_graph.adj
