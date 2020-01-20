@@ -30,7 +30,7 @@ install:
   - echo "TRAVIS_PYTHON_VERSION = $TRAVIS_PYTHON_VERSION"
   - if [[ "$TRAVIS_PYTHON_VERSION" == "3.6" ]]; then conda env create -f environment.yml; fi
   - if [[ "$TRAVIS_PYTHON_VERSION" == "3.7" ]]; then conda env create -f environment.yml; fi
-  - conda activate gravtools-env
+  - conda activate dagtools-env
   - python setup.py install
 
 script: pytest # run tests
