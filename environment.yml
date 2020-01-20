@@ -1,0 +1,14 @@
+name: dagtools-env
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - codecov
+  - pydot
+  - python=3.7
+  - pytest
+  - networkx
+  - numpy
+  - scipy
